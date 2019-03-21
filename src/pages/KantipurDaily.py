@@ -1,13 +1,15 @@
 from src.db_handler.db_helper import DbHelper
 from src.pages.KantipurDailyThread import ScrapeThread
 from src.main.utilities.soup import SoupHelper
+from src.config.config import Config
+
+import pandas as pd
 
 
 class KantipurDaily:
     def __init__(self, page_url):
         self.page_url = page_url
         self.db_helper = DbHelper()
-        self.parent_url = 'https://www.kantipurdaily.com'
 
         self.threads = list()
 
@@ -18,7 +20,7 @@ class KantipurDaily:
             url_soup = SoupHelper.get_txt_soup(data).find('h2')
             url_soup = SoupHelper.get_txt_soup(url_soup).find('a', href=True)
             article_url = url_soup['href']
-            article_url = self.parent_url + article_url.strip()
+            article_url = Config.kantipur_daily + article_url.strip()
 
             if self.db_helper.data_not_present(article_url):
                 thread = ScrapeThread(article_url=article_url)
@@ -33,8 +35,17 @@ class KantipurDaily:
             t.join()
 
 
-if __name__ == '__main__':
-    kantipur_daily = KantipurDaily('https://www.kantipurdaily.com/news/2019/01/11')
+def scrape(row):
+    date = row['date']
+    article_collection = Config.kantipur_daily + '/news/' + str(date)
+    print(article_collection)
+
+    kantipur_daily = KantipurDaily(article_collection)
     kantipur_daily.scrape_article_url()
     kantipur_daily.scrape_article_data()
     kantipur_daily.db_helper.close_connection()
+
+
+if __name__ == '__main__':
+    df_input = pd.read_csv(Config.input, dtype=object, encoding='ISO-8859-1').fillna('')
+    df_input.apply(scrape, 1)

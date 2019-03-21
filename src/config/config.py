@@ -4,6 +4,8 @@ class Config(object):
     chrome_driver_path = '../../driver/chromedriver.exe'
 
     files = '../../files/'
+    input = '../files/input.csv'
+    kantipur_daily = 'https://www.kantipurdaily.com'
 
     server = 'localhost'
     user = 'root'

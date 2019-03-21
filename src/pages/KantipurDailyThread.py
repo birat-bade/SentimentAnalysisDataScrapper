@@ -18,7 +18,7 @@ class ScrapeThread(threading.Thread):
 
     def scrape_article_data(self, article_url):
 
-        print(article_url)
+        # print(article_url)
 
         soup = SoupHelper.get_url_soup(article_url)
 
