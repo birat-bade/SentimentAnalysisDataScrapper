@@ -5,7 +5,7 @@ class Config(object):
 
     files = '../files/'
 
-    input_kantipur = '../files/kantipur/input_1.csv'
+    input_kantipur = '../files/kantipur/input_2.csv'
 
     kantipur_daily = 'https://www.kantipurdaily.com'
 
