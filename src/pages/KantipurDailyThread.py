@@ -11,7 +11,6 @@ class ScrapeThread(threading.Thread):
         self.article_url = article_url
         self.db_helper = DbHelper()
 
-
     def run(self):
         self.lock.acquire()
         self.scrape_article_data(article_url=self.article_url)
