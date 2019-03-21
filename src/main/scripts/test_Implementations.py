@@ -1,7 +1,7 @@
 import unittest
 
 from src.main.base.ApplicationSetup import ApplicationSetup
-from src.pages.EKantipur import EKantipur
+from src.pages.temp.EKantipur import EKantipur
 
 
 class Implementation(ApplicationSetup):
