@@ -3,7 +3,7 @@ class Config(object):
     gecko_driver_path = '../../driver/geckodriver.exe'
     chrome_driver_path = '../../driver/chromedriver.exe'
 
-    files = '../../files/'
+    files = '../files/'
     input = '../files/input.csv'
     kantipur_daily = 'https://www.kantipurdaily.com'
 

@@ -37,7 +37,7 @@ class KantipurDaily:
 
 def scrape(row):
     date = row['date']
-    article_collection = Config.kantipur_daily + '/news/' + str(date)
+    article_collection = Config.kantipur_daily + '/opinion/' + str(date)
     print(article_collection)
 
     kantipur_daily = KantipurDaily(article_collection)

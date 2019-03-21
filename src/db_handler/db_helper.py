@@ -19,7 +19,7 @@ class DbHelper:
             del cursor
 
         except Exception as e:
-            Logger.add_error(str(e))
+            Logger.add_error(str(e) + ' ' + str(article_url))
 
     def data_not_present(self, article_url):
         try:
