@@ -5,9 +5,11 @@ class Config(object):
 
     files = '../files/'
 
-    input_kantipur = '../files/kantipur/input_2.csv'
+    input_kantipur = '../files/kantipur/input_4.csv'
 
     kantipur_daily = 'https://www.kantipurdaily.com'
+
+    temp_url = '../files/temp/temp_url.csv'
 
     server = 'localhost'
     user = 'root'

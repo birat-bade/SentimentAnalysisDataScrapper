@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+from src.main.utilities.logger import Logger
 
 headers = {
     'Connection': 'close',
