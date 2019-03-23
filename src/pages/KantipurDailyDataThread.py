@@ -3,6 +3,7 @@ import threading
 from src.db_handler.db_helper import DbHelper
 from src.main.utilities.soup import SoupHelper
 from src.main.utilities.logger import Logger
+from src.config.config import Config
 
 import requests
 
@@ -57,8 +58,9 @@ def scrape_article_data(article_url):
 
         Logger.add_log('Scrapping : ' + article_url)
 
-        db_helper.insert_article(article_url, title, date.text, article)
+        db_helper.insert_article(article_url, Config.kantipur_daily_, title, date.text, article)
         db_helper.close_connection()
+
     except TimeoutError:
         Logger.add_error('TimeoutError ' + article_url)
 

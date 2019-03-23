@@ -9,12 +9,12 @@ class DbHelper:
                                      charset="utf8")
         self.connection = connection
 
-    def insert_article(self, article_url, title, date, article):
+    def insert_article(self, article_url, source, title, date, article):
         try:
             cursor = self.connection.cursor()
 
-            sql = 'insert into articles (article_link,title,date,article) values (%s,%s,%s,%s)'
-            cursor.execute(sql, [str(article_url), str(title), str(date), str(article)])
+            sql = 'insert into articles (article_url,article_source,title,date,article) values (%s,%s,%s,%s,%s)'
+            cursor.execute(sql, [str(article_url), str(source), str(title), str(date), str(article)])
             self.connection.commit()
             del cursor
 
@@ -25,13 +25,15 @@ class DbHelper:
         try:
             cursor = self.connection.cursor()
 
-            sql = 'select * from articles where article_link = %s'
+            sql = 'select * from articles where article_url = %s'
 
             cursor.execute(sql, [article_url])
             data = cursor.fetchall()
 
             if len(data) > 0:
+                Logger.add_log('Link already scrapped : ' + article_url)
                 return False
+
             return True
 
         except Exception as e:

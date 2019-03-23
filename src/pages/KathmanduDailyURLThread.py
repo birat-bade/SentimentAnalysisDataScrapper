@@ -8,38 +8,36 @@ import requests
 
 
 class URLScrapeThread(threading.Thread):
-    def __init__(self, page_url):
+    def __init__(self, queue, url_list):
 
         threading.Thread.__init__(self)
 
         self.lock = threading.Lock()
-
-        self.page_url = page_url
-
-        self.article_url_list = list()
+        self.queue = queue
+        self.url_list = url_list
 
     def run(self):
-        self.lock.acquire()
-        self.scrape_article_url()
-        self.lock.release()
+        while True:
+            article_url = self.queue.get()
+            try:
+                self.scrape_article_url(article_url)
+            finally:
+                self.queue.task_done()
 
-    def scrape_article_url(self):
+    def scrape_article_url(self, article_url):
         try:
-            soup = SoupHelper.get_url_soup(self.page_url)
+            soup = SoupHelper.get_url_soup(article_url)
             article_soup = soup.findAll('div', {'class': 'teaser offset'})
             for data in article_soup:
                 url_soup = SoupHelper.get_txt_soup(data).find('h2')
                 url_soup = SoupHelper.get_txt_soup(url_soup).find('a', href=True)
                 article_url = url_soup['href']
-                article_url = Config.kantipur_daily + article_url.strip()
+                article_url = Config.kantipur_daily_url + article_url.strip()
 
-                self.article_url_list.append(article_url)
+                self.url_list.append(article_url)
 
         except TimeoutError:
-            Logger.add_error('TimeoutError ' + self.page_url)
+            Logger.add_error('TimeoutError ' + article_url)
 
         except requests.ConnectionError:
-            Logger.add_error('ConnectionError ' + self.page_url)
-
-    def get_article_url_list(self):
-        return self.article_url_list
+            Logger.add_error('ConnectionError ' + article_url)
