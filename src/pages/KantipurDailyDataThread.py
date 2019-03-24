@@ -56,10 +56,13 @@ def scrape_article_data(article_url):
         article = article.split('Share on Facebook')
         article = article[0]
 
-        Logger.add_log('Scrapping : ' + article_url)
+        temp = article_url.split('/')
+        category = temp[3]
 
-        db_helper.insert_article(article_url, Config.kantipur_daily_, title, date.text, article)
+        db_helper.insert_article(article_url, Config.kantipur_daily_, category, title, date.text, article)
         db_helper.close_connection()
+
+        Logger.add_log('Scrapping : ' + article_url)
 
     except TimeoutError:
         Logger.add_error('TimeoutError ' + article_url)

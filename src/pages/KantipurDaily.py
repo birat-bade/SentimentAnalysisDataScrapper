@@ -22,7 +22,7 @@ class KantipurDaily:
 
     def scrape_article_url_initialize(self):
 
-        num_threads = 10
+        num_threads = 100
 
         for i in range(num_threads):
             worker = URLScrapeThread(self.queue_url, self.all_url_list)
@@ -38,7 +38,7 @@ class KantipurDaily:
 
     def scrape_article_data_initialize(self):
 
-        num_threads = 10
+        num_threads = 100
 
         for i in range(num_threads):
             worker = DataScrapeThread(self.queue_data)
