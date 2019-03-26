@@ -1,0 +1,1 @@
+from src.pages.KantipurDaily import KantipurDaily
