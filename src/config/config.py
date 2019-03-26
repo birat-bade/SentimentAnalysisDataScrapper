@@ -1,6 +1,6 @@
 class Config(object):
-    gecko_driver_path = '../../driver/geckodriver.exe'
-    chrome_driver_path = '../../driver/chromedriver.exe'
+    gecko_driver_path = 'src/driver/geckodriver.exe'
+    chrome_driver_path = 'src/driver/chromedriver.exe'
 
     server = 'localhost'
     user = 'root'
@@ -8,7 +8,7 @@ class Config(object):
     db = 'article_warehouse'
 
     files = 'src/files'
-    temp_url = '../files/temp/temp_url.csv'
+    temp_url = 'src/files/temp/temp_url.csv'
     log_path = 'src/log/logs.log'
 
     kantipur_daily_input = 'src/files/kantipur/input.csv'
