@@ -1,12 +1,10 @@
-from src.db_handler.db_helper import DbHelper
-from src.pages.KantipurDailyDataThread import DataScrapeThread
-from src.pages.KathmanduDailyURLThread import URLScrapeThread
-from src.config.config import Config
 import datetime
-
 from queue import Queue
 
-import pandas as pd
+from src.config.config import Config
+from src.db_handler.db_helper import DbHelper
+from src.pages.KantipurDaily.KantipurDailyDataThread import DataScrapeThread
+from src.pages.KantipurDaily.KathmanduDailyURLThread import URLScrapeThread
 
 
 class KantipurDaily:
@@ -23,7 +21,7 @@ class KantipurDaily:
 
     def scrape_article_url_initialize(self):
 
-        num_threads = 100
+        num_threads = 20
 
         for i in range(num_threads):
             worker = URLScrapeThread(self.queue_url, self.all_url_list)
@@ -31,15 +29,15 @@ class KantipurDaily:
             worker.start()
 
         for section in Config.kantipur_daily_sections:
-            article_collection = Config.kantipur_daily_url + '/' + section + '/' + str(self.date)
-            self.queue_url.put(article_collection)
+            article_section = Config.kantipur_daily_url + '/' + section + '/' + str(self.date)
+            self.queue_url.put(article_section)
 
     def scrape_article_url_execute(self):
         self.queue_url.join()
 
     def scrape_article_data_initialize(self):
 
-        num_threads = 100
+        num_threads = 20
 
         for i in range(num_threads):
             worker = DataScrapeThread(self.queue_data)

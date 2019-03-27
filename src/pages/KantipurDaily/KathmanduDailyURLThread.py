@@ -18,15 +18,15 @@ class URLScrapeThread(threading.Thread):
 
     def run(self):
         while True:
-            article_url = self.queue.get()
+            article_section_url = self.queue.get()
             try:
-                self.scrape_article_url(article_url)
+                self.scrape_article_url(article_section_url)
             finally:
                 self.queue.task_done()
 
-    def scrape_article_url(self, article_url):
+    def scrape_article_url(self, article_section_url):
         try:
-            soup = SoupHelper.get_url_soup(article_url)
+            soup = SoupHelper.get_url_soup(article_section_url)
             article_soup = soup.findAll('div', {'class': 'teaser offset'})
             for data in article_soup:
                 url_soup = SoupHelper.get_txt_soup(data).find('h2')
@@ -37,7 +37,7 @@ class URLScrapeThread(threading.Thread):
                 self.url_list.append(article_url)
 
         except TimeoutError:
-            Logger.add_error('TimeoutError ' + article_url)
+            Logger.add_error('TimeoutError ' + article_section_url)
 
         except requests.ConnectionError:
-            Logger.add_error('ConnectionError ' + article_url)
+            Logger.add_error('ConnectionError ' + article_section_url)

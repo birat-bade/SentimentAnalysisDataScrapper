@@ -5,7 +5,7 @@ class Config(object):
     server = 'localhost'
     user = 'root'
     password = ''
-    db = 'article_warehouse'
+    db = 'articlewarehouse'
 
     files = 'src/files'
     temp_url = 'src/files/temp/temp_url.csv'
@@ -19,3 +19,8 @@ class Config(object):
                                'diaspora', 'feature', 'lifestyle', 'literature', 'technology', 'health', 'pathakmanch',
                                'Interview', 'Art',
                                'Other', 'nari-nepali']
+
+    nagarik_news_input = 'src/files/nagarik_news/input.csv'
+    nagarik_news_url = 'https://nagariknews.nagariknetwork.com'
+    nagarik_news = 'Nagarik News'
+    nagarik_news_sections = ['21', '22', '24', '25', '26', '27', '28', '33', '31', '81', '82']

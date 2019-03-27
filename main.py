@@ -1,1 +1,7 @@
-from src.pages.KantipurDaily import KantipurDaily
+# noinspection PyUnresolvedReferences
+
+
+# from src.pages.KantipurDaily.KantipurDaily import KantipurDaily
+
+
+from src.pages.NagarikNews.NagarikNews import NagarikNews
