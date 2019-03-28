@@ -5,7 +5,7 @@ class Config(object):
     server = 'localhost'
     user = 'root'
     password = ''
-    db = 'articlewarehouse'
+    db = 'test_article_warehouse'
 
     files = 'src/files'
     temp_url = 'src/files/temp/temp_url.csv'
@@ -27,3 +27,9 @@ class Config(object):
     nagarik_news_sections_dict = {'21': 'Politics', '22': 'Business', '24': 'Social', '25': 'Art', '26': 'Sports',
                                   '27': 'World', '28': 'Diaspora', '33': 'Technology', '31': 'Health', '81': 'Opinion',
                                   '82': 'Interview'}
+
+    online_khabar_input = 'src/files/online_khabar/input_1.csv'
+    online_khabar_url = 'https://www.onlinekhabar.com'
+    online_khabar = 'Online Khabar'
+    online_khabar_sections = ['news', 'prabhas-news', 'sports', 'entertainment', 'business/technology', 'lifestyle',
+                              'business']
