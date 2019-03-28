@@ -25,18 +25,23 @@ class DataScrapeThread(threading.Thread):
 
 def scrape_article_data(article_url):
     try:
-        # db_helper = DbHelper()
+        db_helper = DbHelper()
+
+        article_url = article_url.split('||||')
+        category = article_url[1]
+        article_url = article_url[0]
 
         soup = SoupHelper.get_url_soup(article_url)
 
         title = soup.find('div', {'class': 'inner-section cover-news'})
         title = SoupHelper.get_txt_soup(title).find('div', {'class': 'col-sm-12'})
         title = SoupHelper.get_txt_soup(title).find('h1')
-        title = title.text
 
         if title is None:
-            Logger.add_error('Error ' + str(article_url))
+            Logger.add_error('Dead Link ' + str(article_url))
             return
+
+        title = title.text
 
         date = soup.find('div', {'class', 'author-location'})
         date = SoupHelper.get_txt_soup(date).find('span')
@@ -52,11 +57,13 @@ def scrape_article_data(article_url):
 
         article_text = list()
         for data in article:
-            article_text.append(data.text)
-        print(article_text)
+            article_text.append(data.text.strip())
+        article_text = ''.join(article_text)
 
-        # db_helper.insert_article(article_url, Config.nagarik_news, category, title, date.text, article)
-        # db_helper.close_connection()
+        db_helper.insert_article(article_url, Config.nagarik_news,
+                                 Config.nagarik_news_sections_dict.get(category), title, date,
+                                 article_text)
+        db_helper.close_connection()
 
         Logger.add_log('Scrapping : ' + article_url)
 

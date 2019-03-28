@@ -28,6 +28,12 @@ class DbHelper:
             article_id = data[0]
             article_sentences = article.split('।')
 
+            while ' ' in article_sentences:
+                article_sentences.remove(' ')
+
+            while '' in article_sentences:
+                article_sentences.remove('')
+
             for sentence in article_sentences:
                 cursor_sentence = self.connection.cursor()
 

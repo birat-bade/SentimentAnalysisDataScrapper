@@ -20,7 +20,10 @@ class Config(object):
                                'Interview', 'Art',
                                'Other', 'nari-nepali']
 
-    nagarik_news_input = 'src/files/nagarik_news/input.csv'
+    nagarik_news_input = 'src/files/nagarik_news/input_6.csv'
     nagarik_news_url = 'https://nagariknews.nagariknetwork.com'
     nagarik_news = 'Nagarik News'
     nagarik_news_sections = ['21', '22', '24', '25', '26', '27', '28', '33', '31', '81', '82']
+    nagarik_news_sections_dict = {'21': 'Politics', '22': 'Business', '24': 'Social', '25': 'Art', '26': 'Sports',
+                                  '27': 'World', '28': 'Diaspora', '33': 'Technology', '31': 'Health', '81': 'Opinion',
+                                  '82': 'Interview'}

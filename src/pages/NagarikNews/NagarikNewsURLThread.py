@@ -34,6 +34,10 @@ class URLScrapeThread(threading.Thread):
                 article_url = url_soup['href']
                 article_url = Config.nagarik_news_url + article_url.strip()
 
+                category = article_section_url.split('?')[0].split('/')[4]
+
+                article_url = article_url + '||||' + str(category)
+
                 self.url_list.append(article_url)
 
         except TimeoutError:

@@ -46,16 +46,18 @@ class NagarikNews:
             worker.start()
 
         for url in self.all_url_list:
-            if self.db_helper.data_not_present(url):
+            temp = url.split('||||')
+            article_url = temp[0]
+            if self.db_helper.data_not_present(article_url):
                 self.queue_data.put(url)
 
     def scrape_article_data_execute(self):
         self.queue_data.join()
 
 
-def scrape(page):
-    # page = row['page']
-    # print(page)
+def scrape(row):
+    page = row['page']
+    print(page)
     nagarik_news = NagarikNews(page)
 
     nagarik_news.scrape_article_url_initialize()
@@ -65,7 +67,5 @@ def scrape(page):
     nagarik_news.scrape_article_data_execute()
 
 
-# df_input = pd.read_csv(Config.nagarik_news_input, dtype=object, encoding='ISO-8859-1').fillna('')
-# df_input.apply(scrape, 1)
-
-scrape(1)
+df_input = pd.read_csv(Config.nagarik_news_input, dtype=object, encoding='ISO-8859-1').fillna('')
+df_input.apply(scrape, 1)
