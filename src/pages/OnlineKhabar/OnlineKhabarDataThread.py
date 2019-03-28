@@ -71,3 +71,6 @@ def scrape_article_data(article_url):
 
     except requests.ConnectionError:
         Logger.add_error('ConnectionError ' + article_url)
+
+    except requests.TooManyRedirects:
+        Logger.add_error('Redirect Error ' + article_url)

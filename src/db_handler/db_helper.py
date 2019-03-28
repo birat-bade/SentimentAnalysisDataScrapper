@@ -50,6 +50,8 @@ class DbHelper:
 
     def data_not_present(self, article_url):
         try:
+
+            article_url = article_url.strip()
             cursor = self.connection.cursor()
 
             sql = 'select * from articles where article_url = %s'

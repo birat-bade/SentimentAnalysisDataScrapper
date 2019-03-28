@@ -18,13 +18,13 @@ class URLScrapeThread(threading.Thread):
 
     def run(self):
         while True:
-            article_section_url = self.queue.get()
+            article_section_url, category = self.queue.get()
             try:
-                self.scrape_article_url(article_section_url)
+                self.scrape_article_url(article_section_url, category)
             finally:
                 self.queue.task_done()
 
-    def scrape_article_url(self, article_section_url):
+    def scrape_article_url(self, article_section_url, category):
         try:
             soup = SoupHelper.get_url_soup(article_section_url)
             article_soup = soup.findAll('div', {'class': 'item__wrap'})
@@ -32,8 +32,6 @@ class URLScrapeThread(threading.Thread):
                 url_soup = SoupHelper.get_txt_soup(data).find('a', href=True)
                 article_url = url_soup['href']
                 article_url = article_url.strip()
-
-                category = article_section_url.split('/')[5]
 
                 article_url = article_url + '||||' + str(category)
 

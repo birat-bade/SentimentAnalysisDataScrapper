@@ -31,7 +31,7 @@ class OnlineKhabar:
 
         for category in Config.online_khabar_sections:
             article_section = Config.online_khabar_url + '/content/' + category + '/page/' + str(self.page)
-            self.queue_url.put(article_section)
+            self.queue_url.put((article_section, category))
 
     def scrape_article_url_execute(self):
         self.queue_url.join()

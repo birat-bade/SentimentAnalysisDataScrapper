@@ -4,7 +4,7 @@ from queue import Queue
 from src.config.config import Config
 from src.db_handler.db_helper import DbHelper
 from src.pages.KantipurDaily.KantipurDailyDataThread import DataScrapeThread
-from src.pages.KantipurDaily.KathmanduDailyURLThread import URLScrapeThread
+from src.pages.KantipurDaily.KantipurDailyURLThread import URLScrapeThread
 
 
 class KantipurDaily:

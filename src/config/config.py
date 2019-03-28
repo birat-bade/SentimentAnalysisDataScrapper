@@ -5,7 +5,7 @@ class Config(object):
     server = 'localhost'
     user = 'root'
     password = ''
-    db = 'test_article_warehouse'
+    db = 'articlewarehouse'
 
     files = 'src/files'
     temp_url = 'src/files/temp/temp_url.csv'
@@ -20,7 +20,7 @@ class Config(object):
                                'Interview', 'Art',
                                'Other', 'nari-nepali']
 
-    nagarik_news_input = 'src/files/nagarik_news/input_6.csv'
+    nagarik_news_input = 'src/files/nagarik_news/input_1.csv'
     nagarik_news_url = 'https://nagariknews.nagariknetwork.com'
     nagarik_news = 'Nagarik News'
     nagarik_news_sections = ['21', '22', '24', '25', '26', '27', '28', '33', '31', '81', '82']
@@ -31,5 +31,8 @@ class Config(object):
     online_khabar_input = 'src/files/online_khabar/input_1.csv'
     online_khabar_url = 'https://www.onlinekhabar.com'
     online_khabar = 'Online Khabar'
-    online_khabar_sections = ['news', 'prabhas-news', 'sports', 'entertainment', 'business/technology', 'lifestyle',
-                              'business']
+    online_khabar_sections = ['news', 'prabhas-news', 'sports-news', 'ent-news', 'lifestylenews', 'cover-story',
+                              'fitness', 'sambandha', 'interior', 'khanpan', 'beauty', 'sex-health',
+                              'religionfallow', 'auto', 'tourism', 'eco-policy', 'bank-main', 'biz-talk', 'technology',
+                              'corporate',
+                              'rojgar']

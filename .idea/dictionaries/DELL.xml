@@ -6,12 +6,17 @@
       <w>fillna</w>
       <w>gorkha</w>
       <w>khabar</w>
+      <w>khanpan</w>
+      <w>lifestylenews</w>
       <w>nagarik</w>
       <w>nagariknetwork</w>
       <w>nagariknews</w>
       <w>onlinekhabar</w>
       <w>patra</w>
       <w>prabhas</w>
+      <w>religionfallow</w>
+      <w>rojgar</w>
+      <w>sambandha</w>
     </words>
   </dictionary>
 </component>

@@ -31,7 +31,7 @@ class NagarikNews:
 
         for category in Config.nagarik_news_sections:
             article_section = Config.nagarik_news_url + '/category/' + category + '?page=' + str(self.page)
-            self.queue_url.put(article_section)
+            self.queue_url.put((article_section, category))
 
     def scrape_article_url_execute(self):
         self.queue_url.join()
