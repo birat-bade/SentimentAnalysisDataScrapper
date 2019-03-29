@@ -2,7 +2,6 @@ import datetime
 from queue import Queue
 
 from src.config.config import Config
-from src.db_handler.db_helper import DbHelper
 from src.pages.KantipurDaily.KantipurDailyDataThread import DataScrapeThread
 from src.pages.KantipurDaily.KantipurDailyURLThread import URLScrapeThread
 
@@ -10,7 +9,6 @@ from src.pages.KantipurDaily.KantipurDailyURLThread import URLScrapeThread
 class KantipurDaily:
     def __init__(self, date):
         self.date = date
-        self.db_helper = DbHelper()
 
         self.queue_url = Queue(maxsize=0)
         self.queue_data = Queue(maxsize=0)
@@ -61,8 +59,6 @@ def scrape(date):
 
     kantipur_daily.scrape_article_data_initialize()
     kantipur_daily.scrape_article_data_execute()
-
-    kantipur_daily.db_helper.close_connection()
 
 
 # df_input = pd.read_csv(Config.kantipur_daily_input, dtype=object, encoding='ISO-8859-1').fillna('')

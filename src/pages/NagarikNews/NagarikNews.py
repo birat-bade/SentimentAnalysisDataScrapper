@@ -3,7 +3,6 @@ import pandas as pd
 from queue import Queue
 
 from src.config.config import Config
-from src.db_handler.db_helper import DbHelper
 from src.pages.NagarikNews.NagarikNewsURLThread import URLScrapeThread
 from src.pages.NagarikNews.NagarikNewsDataThread import DataScrapeThread
 
@@ -11,7 +10,6 @@ from src.pages.NagarikNews.NagarikNewsDataThread import DataScrapeThread
 class NagarikNews:
     def __init__(self, page):
         self.page = page
-        self.db_helper = DbHelper()
 
         self.queue_url = Queue(maxsize=0)
         self.queue_data = Queue(maxsize=0)
