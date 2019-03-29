@@ -31,6 +31,9 @@ def scrape_article_data(article_url):
         category = article_url[1]
         article_url = article_url[0]
 
+        if db_helper.data_present(article_url):
+            return
+
         soup = SoupHelper.get_url_soup(article_url)
 
         title = soup.find('div', {'class': 'inner-section cover-news'})

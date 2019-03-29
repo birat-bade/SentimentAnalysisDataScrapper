@@ -33,7 +33,7 @@ class URLScrapeThread(threading.Thread):
                 article_url = url_soup['href']
                 article_url = article_url.strip()
 
-                article_url = article_url + '||||' + str(category)
+                article_url = article_url + '||||' + str(Config.online_khabar_section_dict.get(category))
 
                 self.url_list.append(article_url)
 

@@ -5,7 +5,7 @@ class Config(object):
     server = 'localhost'
     user = 'root'
     password = ''
-    db = 'articlewarehouse'
+    db = 'test_article_warehouse'
 
     files = 'src/files'
     temp_url = 'src/files/temp/temp_url.csv'
@@ -36,3 +36,28 @@ class Config(object):
                               'religionfallow', 'auto', 'tourism', 'eco-policy', 'bank-main', 'biz-talk', 'technology',
                               'corporate',
                               'rojgar']
+    online_khabar_section_dict = {'news': 'News',
+                                  'prabhas-news': 'Diaspora',
+                                  'sports-news': 'Sports',
+                                  'merokatha': 'Sports',
+                                  'ent-news': 'Entertainment',
+                                  'bolly-hollywood': 'Entertainment',
+                                  'gassip': 'Entertainment',
+                                  'ent-interview': 'Entertainment',
+                                  'lifestylenews': 'Lifestyle',
+                                  'cover-story': 'Lifestyle',
+                                  'fitness': 'Lifestyle',
+                                  'sambandha': 'Lifestyle',
+                                  'interior': 'Lifestyle',
+                                  'khanpan': 'Lifestyle',
+                                  'beauty': 'Lifestyle',
+                                  'sex-health': 'Lifestyle',
+                                  'religionfallow': 'Lifestyle',
+                                  'auto': 'Business ',
+                                  'tourism': 'Business ',
+                                  'eco-policy': 'Business ',
+                                  'bank-main': 'Business ',
+                                  'biz-talk': 'Business ',
+                                  'technology': 'Technology',
+                                  'corporate': 'Business',
+                                  'rojgar': 'Business'}

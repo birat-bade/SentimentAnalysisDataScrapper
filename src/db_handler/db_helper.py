@@ -48,7 +48,7 @@ class DbHelper:
             self.connection.rollback()
             Logger.add_error(str(e) + ' ' + str(article_url))
 
-    def data_not_present(self, article_url):
+    def data_present(self, article_url):
         try:
 
             article_url = article_url.strip()
@@ -61,9 +61,9 @@ class DbHelper:
 
             if len(data) > 0:
                 Logger.add_log('Link already scrapped : ' + article_url)
-                return False
+                return True
 
-            return True
+            return False
 
         except Exception as e:
             Logger.add_error(str(e))

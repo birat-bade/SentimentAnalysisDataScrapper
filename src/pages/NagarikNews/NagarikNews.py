@@ -46,10 +46,7 @@ class NagarikNews:
             worker.start()
 
         for url in self.all_url_list:
-            temp = url.split('||||')
-            article_url = temp[0]
-            if self.db_helper.data_not_present(article_url):
-                self.queue_data.put(url)
+            self.queue_data.put(url)
 
     def scrape_article_data_execute(self):
         self.queue_data.join()
