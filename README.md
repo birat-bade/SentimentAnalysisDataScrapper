@@ -1,5 +1,5 @@
 # Sentiment Analysis Data Scrapper
-This utility scrapes news articles from eKantipur and KantipurDaily.
+This utility scrapes news articles from KantipurDaily, Nagarik News and Gorkhapatra.
 ## Dependencies
 * Python 3.6.7
 * BeautifulSoup 4.5.3
