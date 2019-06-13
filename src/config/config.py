@@ -5,7 +5,8 @@ class Config(object):
     server = 'localhost'
     user = 'root'
     password = ''
-    db = 'test_article_warehouse'
+    db = 'article_warehouse'
+    db_english = 'article_warehouse_english'
 
     files = 'src/files'
     temp_url = 'src/files/temp/temp_url.csv'
@@ -61,3 +62,24 @@ class Config(object):
                                   'technology': 'Technology',
                                   'corporate': 'Business',
                                   'rojgar': 'Business'}
+
+    nepali_times_input = 'src/files/nepali_times/input_0.csv'
+    nepali_times_url = 'https://www.nepalitimes.com/'
+    nepali_times = 'Nepali Times'
+
+    nepali_times_section = ['latest', 'multimedia', 'here-now', 'editorial', 'opinion', 'about-town', 'must-see']
+
+    nepali_times_spider_output_location = 'E:\\Projects\\Python Projects\\SentimentAnalysisDataScrapper\\src\\files\\nepali_times\\spider_output.csv'
+
+    karobar_daily_input = 'src/files/karobar_daily/input.csv'
+    karobar_daily_url = 'https://www.english.karobardaily.com/'
+    karobar_daily = 'Karobar Daily'
+
+    karobar_daily_section = ['economy', 'banking', 'insurance', 'country', 'politics', 'society', 'development',
+                             'opinion', 'interview']
+
+    setopati_input = 'src/files/setopati/input_2.csv'
+    setopati_url = 'https://www.setopati.com/'
+    setopati = 'Setopati'
+    setopati_sections = ['politics', 'provinces', 'social', 'opinion', 'kinmel', 'art', 'sports', 'ghumphir',
+                         'blog', 'literature', 'global']

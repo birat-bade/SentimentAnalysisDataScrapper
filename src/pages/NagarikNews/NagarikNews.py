@@ -3,6 +3,7 @@ import pandas as pd
 from queue import Queue
 
 from src.config.config import Config
+
 from src.pages.NagarikNews.NagarikNewsURLThread import URLScrapeThread
 from src.pages.NagarikNews.NagarikNewsDataThread import DataScrapeThread
 

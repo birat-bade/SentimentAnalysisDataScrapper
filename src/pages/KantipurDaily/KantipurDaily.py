@@ -1,7 +1,9 @@
 import datetime
+import pandas as pd
 from queue import Queue
 
 from src.config.config import Config
+
 from src.pages.KantipurDaily.KantipurDailyDataThread import DataScrapeThread
 from src.pages.KantipurDaily.KantipurDailyURLThread import URLScrapeThread
 
@@ -49,8 +51,8 @@ class KantipurDaily:
         self.queue_data.join()
 
 
-def scrape(date):
-    # date = row['date']
+def scrape(row):
+    date = row['date']
     print(date)
     kantipur_daily = KantipurDaily(date)
 
@@ -61,8 +63,8 @@ def scrape(date):
     kantipur_daily.scrape_article_data_execute()
 
 
-# df_input = pd.read_csv(Config.kantipur_daily_input, dtype=object, encoding='ISO-8859-1').fillna('')
-# df_input.apply(scrape, 1)
+df_input = pd.read_csv(Config.kantipur_daily_input, dtype=object, encoding='ISO-8859-1').fillna('')
+df_input.apply(scrape, 1)
 
-today_date = datetime.datetime.today().strftime('%Y/%m/%d')
-scrape(today_date)
+# today_date = datetime.datetime.today().strftime('%Y/%m/%d')
+# scrape(today_date)

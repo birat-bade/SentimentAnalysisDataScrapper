@@ -25,7 +25,7 @@ class DataScrapeThread(threading.Thread):
 
 def scrape_article_data(article_url):
     try:
-        db_helper = DbHelper()
+        db_helper = DbHelper(Config.db)
 
         article_url = article_url.split('||||')
         category = article_url[1]
@@ -65,7 +65,7 @@ def scrape_article_data(article_url):
 
         db_helper.insert_article(article_url, Config.nagarik_news,
                                  Config.nagarik_news_sections_dict.get(category), title, date,
-                                 article_text)
+                                 article_text, '।')
         db_helper.close_connection()
 
         Logger.add_log('Scrapping : ' + article_url)

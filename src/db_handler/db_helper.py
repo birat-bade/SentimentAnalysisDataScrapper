@@ -4,12 +4,12 @@ from src.main.utilities.logger import Logger
 
 
 class DbHelper:
-    def __init__(self):
-        connection = MySQLdb.connect(Config.server, Config.user, Config.password, Config.db, use_unicode=True,
+    def __init__(self, db):
+        connection = MySQLdb.connect(Config.server, Config.user, Config.password, db, use_unicode=True,
                                      charset="utf8")
         self.connection = connection
 
-    def insert_article(self, article_url, source, category, title, date, article):
+    def insert_article(self, article_url, source, category, title, date, article, separator):
         try:
             cursor_article = self.connection.cursor()
 
@@ -26,7 +26,7 @@ class DbHelper:
             data = cursor_article_sentence.fetchone()
 
             article_id = data[0]
-            article_sentences = article.split('।')
+            article_sentences = article.split(separator)
 
             while ' ' in article_sentences:
                 article_sentences.remove(' ')
