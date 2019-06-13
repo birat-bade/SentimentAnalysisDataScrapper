@@ -78,8 +78,8 @@ class Config(object):
     karobar_daily_section = ['economy', 'banking', 'insurance', 'country', 'politics', 'society', 'development',
                              'opinion', 'interview']
 
-    setopati_input = 'src/files/setopati/input_2.csv'
+    setopati_input = 'src/files/setopati/input.csv'
     setopati_url = 'https://www.setopati.com/'
     setopati = 'Setopati'
     setopati_sections = ['politics', 'provinces', 'social', 'opinion', 'kinmel', 'art', 'sports', 'ghumphir',
-                         'blog', 'literature', 'global']
+                         'blog', 'literature', 'global', 'from-paper']

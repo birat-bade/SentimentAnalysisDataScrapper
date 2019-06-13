@@ -7,32 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac757bcb-a3b7-42e8-845a-301a1e609cbd" name="Default" comment="Configured scrapper to scrape data from 2018/01/01 to 2019/03/21">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/nepali_times/input.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/KarobarDaily/KarobarDailyDataThread.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/NepaliTimes/NepaliTimesDataThread.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/driver/chromedriver.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/driver/geckodriver.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/base/ApplicationSetup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scripts/test_Implementations.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/GorkhaPatra/GorkhaPatraDataThread.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/DELL.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/DELL.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/config.py" afterPath="$PROJECT_DIR$/src/config/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db_handler/db_helper.py" afterPath="$PROJECT_DIR$/src/db_handler/db_helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/files/kantipur/input.csv" afterPath="$PROJECT_DIR$/src/files/kantipur/input.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/files/kantipur/input_10.csv" afterPath="$PROJECT_DIR$/src/files/kantipur/input_10.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/locators/Locators.py" afterPath="$PROJECT_DIR$/src/locators/Locators.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/files/setopati/input.csv" afterPath="$PROJECT_DIR$/src/files/setopati/input.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log/logs.log" afterPath="$PROJECT_DIR$/src/log/logs.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/KantipurDaily/KantipurDaily.py" afterPath="$PROJECT_DIR$/src/pages/KantipurDaily/KantipurDaily.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/KantipurDaily/KantipurDailyDataThread.py" afterPath="$PROJECT_DIR$/src/pages/KantipurDaily/KantipurDailyDataThread.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/NagarikNews/NagarikNews.py" afterPath="$PROJECT_DIR$/src/pages/NagarikNews/NagarikNews.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/NagarikNews/NagarikNewsDataThread.py" afterPath="$PROJECT_DIR$/src/pages/NagarikNews/NagarikNewsDataThread.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/OnlineKhabar/OnlineKhabar.py" afterPath="$PROJECT_DIR$/src/pages/OnlineKhabar/OnlineKhabar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/OnlineKhabar/OnlineKhabarDataThread.py" afterPath="$PROJECT_DIR$/src/pages/OnlineKhabar/OnlineKhabarDataThread.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/GorkhaPatra/GorkhaPatra.py" afterPath="$PROJECT_DIR$/src/pages/NepaliTimes/NepaliTimes.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/GorkhaPatra/GorkhaPatraURLThread.py" afterPath="$PROJECT_DIR$/src/pages/NepaliTimes/NepaliTimesURLThread.py" />
     </list>
     <ignored path="SetimentAalysisDataScrapper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +31,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -66,18 +54,30 @@
       <file leaf-file-name="logs.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/log/logs.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3464">
-              <caret line="36476" column="72" selection-start-line="36476" selection-start-column="72" selection-end-line="36476" selection-end-column="72" />
+            <state relative-caret-position="261">
+              <caret line="26844" column="35" selection-start-line="19603" selection-start-column="35" selection-end-line="19603" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/config.py">
+      <file leaf-file-name="Setopati.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Setopati/Setopati.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="470">
+              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetopatiDataThread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Setopati/SetopatiDataThread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -143,12 +143,12 @@
         <option value="$PROJECT_DIR$/src/spider/NepaliTimes/NepaliTimes/spiders/nepali_times.py" />
         <option value="$PROJECT_DIR$/src/spider/AnnapurnaPost/AnnapurnaPost/spiders/annapurna_post.py" />
         <option value="$PROJECT_DIR$/src/pages/AnnapurnaPost/AnnapurnaPost.py" />
-        <option value="$PROJECT_DIR$/src/pages/Setopati/SetopatiDataThread.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/src/files/setopati/input.csv" />
-        <option value="$PROJECT_DIR$/src/config/config.py" />
         <option value="$PROJECT_DIR$/src/files/setopati/input_2.csv" />
+        <option value="$PROJECT_DIR$/src/files/setopati/input.csv" />
+        <option value="$PROJECT_DIR$/src/pages/Setopati/SetopatiDataThread.py" />
         <option value="$PROJECT_DIR$/src/log/logs.log" />
+        <option value="$PROJECT_DIR$/src/config/config.py" />
       </list>
     </option>
   </component>
@@ -183,6 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,102 +202,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysisDataScrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Annapurna Post" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -634,13 +548,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22327965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22327965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5021142" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30283913" sideWeight="0.49788582" order="2" side_tool="false" content_ui="tabs" />
@@ -653,6 +566,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -747,13 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/GorkhaPatra/GorkhaPatraDataThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/GorkhaPatra/GorkhaPatraDataThread.py" />
     <entry file="file://$PROJECT_DIR$/src/files/kantipur/input_10.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -935,13 +843,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/AnnapurnaPost/AnnapurnaPost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/AnnapurnaPost/AnnapurnaPost.py" />
     <entry file="file://$PROJECT_DIR$/src/db_handler/db_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -963,34 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Setopati/Setopati.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Setopati/SetopatiDataThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Setopati/SetopatiURLThread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-550">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/setopati/input.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1001,29 +879,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/config.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="102">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Setopati/Setopati.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/setopati/input.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Setopati/SetopatiDataThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/log/logs.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3464">
-          <caret line="36476" column="72" selection-start-line="36476" selection-start-column="72" selection-end-line="36476" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="LargeFileEditor">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        <state relative-caret-position="261">
+          <caret line="26844" column="35" selection-start-line="19603" selection-start-column="35" selection-end-line="19603" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
           <folding />
         </state>
       </provider>
